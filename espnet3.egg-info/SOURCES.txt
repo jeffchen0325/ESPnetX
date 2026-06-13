@@ -1,11 +1,18 @@
+.gitignore
 LICENSE
 README.md
 pyproject.toml
 version.txt
 TEMPLATE/__init__.py
 TEMPLATE/asr/__init__.py
+TEMPLATE/asr/readme.md
 TEMPLATE/asr/run.py
+TEMPLATE/asr/conf/inference.yaml
+TEMPLATE/asr/conf/metrics.yaml
+TEMPLATE/asr/conf/publication.yaml
+TEMPLATE/asr/conf/training.yaml
 TEMPLATE/asr/src/__init__.py
+TEMPLATE/asr/src/hf_model_readme.md
 TEMPLATE/asr/src/inference.py
 egs3/__init__.py
 egs3/mini_an4/__init__.py
@@ -171,6 +178,7 @@ espnet3/main_funcs/collect_stats.py
 espnet3/main_funcs/pack_funcs.py
 espnet3/model_zoo/__init__.py
 espnet3/model_zoo/downloader.py
+espnet3/model_zoo/table.csv
 espnet3/model_zoo/zenodo_upload.py
 espnet3/parallel/__init__.py
 espnet3/parallel/base_runner.py

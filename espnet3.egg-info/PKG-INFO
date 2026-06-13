@@ -55,7 +55,7 @@ Requires-Dist: jiwer; extra == "asr"
 Provides-Extra: tts
 Requires-Dist: pyworld>=0.3.4; extra == "tts"
 Requires-Dist: pypinyin<=0.44.0; extra == "tts"
-Requires-Dist: espnet-tts-frontend; extra == "tts"
+Requires-Dist: espnet_tts_frontend; extra == "tts"
 Requires-Dist: g2p_en @ git+https://github.com/espnet/g2p.git@master ; extra == "tts"
 Requires-Dist: jamo==0.4.1; extra == "tts"
 Requires-Dist: jaconv; extra == "tts"

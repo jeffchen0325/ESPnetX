@@ -113,7 +113,7 @@ h5py>=2.10.0
 [tts]
 pyworld>=0.3.4
 pypinyin<=0.44.0
-espnet-tts-frontend
+espnet_tts_frontend
 g2p_en @ git+https://github.com/espnet/g2p.git@master
 jamo==0.4.1
 jaconv
