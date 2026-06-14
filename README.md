@@ -1,6 +1,6 @@
-espnetX
+espnetx
 
-独立的 espnetX 框架。本项目基于 [ESPnet](https://espnet.github.io/espnet/)，旨在提供一个更轻量、更现代化的语音处理库。
+独立的 ESPnetX 框架。本项目基于 [ESPnet](https://espnet.github.io/espnet/)，旨在提供一个更轻量、更现代化的语音处理库。
 
 ## 简介
 
@@ -62,7 +62,7 @@ espnetX
     克隆仓库：
     ```bash
     $ cd ~
-    $ git clone https://github.com/jeffchen0325/ESPnetX.git
+    $ git clone https://github.com/jeffchen0325/espnetx.git
     ```
     安装ESPnetX
     ```bash
@@ -83,6 +83,6 @@ espnetX
 
 以下是一个简单的示例，展示如何运行一个基础的 ASR 实验：
 ```bash
-$ cd espnet3/egs3/mini_an4/asr
+$ cd espnetx/egs3/mini_an4/asr
 $ python run.py
 ```
