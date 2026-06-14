@@ -1,8 +1,8 @@
 [project]
-name = "espnetx"
+name = "espnet3"
 dynamic = ["version", "readme"]
 authors = []
-description = "ESPnetX: end-to-end speech processing toolkit version X"
+description = "ESPnet3: end-to-end speech processing toolkit version 3"
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -55,7 +55,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jeffchen0325/ESPnetX"
+Homepage = "https://github.com/jeffchen0325/espnet3"
 
 [build-system]
 requires = ["setuptools>=38.5.1,<74.0.0", "wheel", "setuptools-scm>=8.0,<9.0"]
@@ -66,10 +66,10 @@ version = {file = "version.txt"}
 readme = {file = ["README.md"], content-type = "text/markdown"}
 
 [tool.setuptools.packages.find]
-include = ["espnet3*", "egs3*", "TEMPLATE*", "tools*"]
+include = ["espnet3*", "egs3*", "TEMPLATE*"]
 
 [tool.setuptools.package-data]
-egs3 = ["TEMPLATE/**/*.yaml"]
+TEMPLATE = ["**/*.yaml"]
 
 
 [project.optional-dependencies]
@@ -186,12 +186,12 @@ doc = [
 ]
 
 all = [
-  "espnetx[asr]",
-  "espnetx[tts]",
-  "espnetx[enh]",
-  "espnetx[spk]",
-  "espnetx[speechlm]",
-  "espnetx[egs3]",
+  "espnet3[asr]",
+  "espnet3[tts]",
+  "espnet3[enh]",
+  "espnet3[spk]",
+  "espnet3[speechlm]",
+  "espnet3[egs3]",
   "fairscale",
   "transformers",
   "evaluate",
