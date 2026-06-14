@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 
 import torch
 
-from espnet2.legacy.nets.transducer_decoder_interface import (
+from espnet3.legacy.nets.transducer_decoder_interface import (
     ExtendedHypothesis,
     Hypothesis,
     TransducerDecoderInterface,

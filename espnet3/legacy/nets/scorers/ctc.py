@@ -3,8 +3,8 @@
 import numpy as np
 import torch
 
-from espnet2.legacy.nets.ctc_prefix_score import CTCPrefixScore, CTCPrefixScoreTH
-from espnet2.legacy.nets.scorer_interface import BatchPartialScorerInterface
+from espnet3.legacy.nets.ctc_prefix_score import CTCPrefixScore, CTCPrefixScoreTH
+from espnet3.legacy.nets.scorer_interface import BatchPartialScorerInterface
 
 
 class CTCPrefixScorer(BatchPartialScorerInterface):
@@ -15,7 +15,7 @@ class CTCPrefixScorer(BatchPartialScorerInterface):
 
         Args:
             ctc (torch.nn.Module): The CTC implementation.
-                For example, :class:`espnet2.legacy.nets.pytorch_backend.ctc.CTC`
+                For example, :class:`espnet3.legacy.nets.pytorch_backend.ctc.CTC`
             eos (int): The end-of-sequence id.
 
         """

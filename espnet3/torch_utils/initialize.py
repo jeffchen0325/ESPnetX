@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-"""Initialize modules for espnet2 neural networks."""
+"""Initialize modules for espnet3 neural networks."""
 
 import logging
 

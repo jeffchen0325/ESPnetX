@@ -11,7 +11,7 @@ References:
 import torch
 from typeguard import typechecked
 
-from espnet2.layers.create_adapter_fn import create_houlsby_adapter, create_lora_adapter
+from espnet3.layers.create_adapter_fn import create_houlsby_adapter, create_lora_adapter
 
 create_adapter_fn_table = {
     "lora": create_lora_adapter,

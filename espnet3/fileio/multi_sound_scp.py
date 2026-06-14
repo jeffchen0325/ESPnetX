@@ -4,8 +4,8 @@ from typing import Tuple
 import numpy as np
 from typeguard import typechecked
 
-from espnet2.fileio.read_text import read_multi_columns_text
-from espnet2.fileio.sound_scp import soundfile_read
+from espnet3.fileio.read_text import read_multi_columns_text
+from espnet3.fileio.sound_scp import soundfile_read
 
 
 class MultiSoundScpReader(collections.abc.Mapping):

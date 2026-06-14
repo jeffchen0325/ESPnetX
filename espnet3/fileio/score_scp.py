@@ -6,7 +6,7 @@ from typing import Union
 import numpy as np
 from typeguard import typechecked
 
-from espnet2.fileio.read_text import read_2columns_text
+from espnet3.fileio.read_text import read_2columns_text
 
 try:
     import music21 as m21  # for CI import

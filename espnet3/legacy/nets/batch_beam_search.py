@@ -6,7 +6,7 @@ from typing import Any, Dict, List, NamedTuple, Tuple
 import torch
 from torch.nn.utils.rnn import pad_sequence
 
-from espnet2.legacy.nets.beam_search import BeamSearch, Hypothesis
+from espnet3.legacy.nets.beam_search import BeamSearch, Hypothesis
 
 logger = logging.getLogger(__name__)
 

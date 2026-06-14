@@ -8,15 +8,15 @@ from typing import Tuple  # noqa: H301
 
 import torch
 
-from espnet2.asr.transducer.beam_search_transducer_streaming import (
+from espnet3.asr.transducer.beam_search_transducer_streaming import (
     BeamSearchTransducerStreaming,
 )
-from espnet2.legacy.nets.batch_beam_search import BatchBeamSearch, BatchHypothesis
-from espnet2.legacy.nets.beam_search import Hypothesis
-from espnet2.legacy.nets.beam_search_timesync_streaming import (
+from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch, BatchHypothesis
+from espnet3.legacy.nets.beam_search import Hypothesis
+from espnet3.legacy.nets.beam_search_timesync_streaming import (
     BeamSearchTimeSyncStreaming,
 )
-from espnet2.legacy.nets.e2e_asr_common import end_detect
+from espnet3.legacy.nets.e2e_asr_common import end_detect
 
 
 class BatchBeamSearchOnline(BatchBeamSearch):

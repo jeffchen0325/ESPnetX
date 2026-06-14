@@ -11,10 +11,10 @@ import torch
 import torch.nn.functional as F
 from typeguard import typechecked
 
-from espnet2.torch_utils.device_funcs import to_device
-from espnet2.train.distributed_utils import DistributedOption
-from espnet2.train.reporter import SubReporter
-from espnet2.train.trainer import Trainer, TrainerOptions
+from espnet3.torch_utils.device_funcs import to_device
+from espnet3.train.distributed_utils import DistributedOption
+from espnet3.train.reporter import SubReporter
+from espnet3.train.trainer import Trainer, TrainerOptions
 
 
 class LIDTrainer(Trainer):

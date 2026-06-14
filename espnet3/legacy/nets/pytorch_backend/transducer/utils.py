@@ -6,8 +6,8 @@ from typing import Any, Dict, List, Optional, Union
 import numpy as np
 import torch
 
-from espnet2.legacy.nets.pytorch_backend.nets_utils import pad_list
-from espnet2.legacy.nets.transducer_decoder_interface import (
+from espnet3.legacy.nets.pytorch_backend.nets_utils import pad_list
+from espnet3.legacy.nets.transducer_decoder_interface import (
     ExtendedHypothesis,
     Hypothesis,
 )

@@ -4,34 +4,34 @@ from typing import Any, Dict, List, Tuple, Union
 
 import torch
 
-from espnet2.legacy.nets.pytorch_backend.conformer.convolution import ConvolutionModule
-from espnet2.legacy.nets.pytorch_backend.conformer.encoder_layer import (
+from espnet3.legacy.nets.pytorch_backend.conformer.convolution import ConvolutionModule
+from espnet3.legacy.nets.pytorch_backend.conformer.encoder_layer import (
     EncoderLayer as ConformerEncoderLayer,
 )
-from espnet2.legacy.nets.pytorch_backend.nets_utils import get_activation
-from espnet2.legacy.nets.pytorch_backend.transducer.conv1d_nets import (
+from espnet3.legacy.nets.pytorch_backend.nets_utils import get_activation
+from espnet3.legacy.nets.pytorch_backend.transducer.conv1d_nets import (
     CausalConv1d,
     Conv1d,
 )
-from espnet2.legacy.nets.pytorch_backend.transducer.transformer_decoder_layer import (
+from espnet3.legacy.nets.pytorch_backend.transducer.transformer_decoder_layer import (
     TransformerDecoderLayer,
 )
-from espnet2.legacy.nets.pytorch_backend.transducer.vgg2l import VGG2L
-from espnet2.legacy.nets.pytorch_backend.transformer.attention import (
+from espnet3.legacy.nets.pytorch_backend.transducer.vgg2l import VGG2L
+from espnet3.legacy.nets.pytorch_backend.transformer.attention import (
     MultiHeadedAttention,
     RelPositionMultiHeadedAttention,
 )
-from espnet2.legacy.nets.pytorch_backend.transformer.embedding import (
+from espnet3.legacy.nets.pytorch_backend.transformer.embedding import (
     PositionalEncoding,
     RelPositionalEncoding,
     ScaledPositionalEncoding,
 )
-from espnet2.legacy.nets.pytorch_backend.transformer.encoder_layer import EncoderLayer
-from espnet2.legacy.nets.pytorch_backend.transformer.positionwise_feed_forward import (
+from espnet3.legacy.nets.pytorch_backend.transformer.encoder_layer import EncoderLayer
+from espnet3.legacy.nets.pytorch_backend.transformer.positionwise_feed_forward import (
     PositionwiseFeedForward,
 )
-from espnet2.legacy.nets.pytorch_backend.transformer.repeat import MultiSequential
-from espnet2.legacy.nets.pytorch_backend.transformer.subsampling import (
+from espnet3.legacy.nets.pytorch_backend.transformer.repeat import MultiSequential
+from espnet3.legacy.nets.pytorch_backend.transformer.subsampling import (
     Conv2dSubsampling,
 )
 

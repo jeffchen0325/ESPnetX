@@ -13,7 +13,7 @@ import torch
 from torch.utils.data.dataset import IterableDataset
 from typeguard import typechecked
 
-from espnet2.train.dataset import ESPnetDataset
+from espnet3.train.dataset import ESPnetDataset
 
 
 def load_kaldi(input):
@@ -222,7 +222,7 @@ class IterableESPnetDataset(IterableDataset):
                 data.update(from_non_iterable)
 
             # 3. [Option] Apply preprocessing
-            #   e.g. espnet2.train.preprocessor:CommonPreprocessor
+            #   e.g. espnet3.train.preprocessor:CommonPreprocessor
             if self.preprocess is not None:
                 data = self.preprocess(self.preprocess_prefix + uid, data)
 

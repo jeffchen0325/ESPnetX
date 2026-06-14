@@ -8,8 +8,8 @@ import kaldiio
 import numpy
 import soundfile
 
-from espnet2.legacy.utils.cli_utils import assert_scipy_wav_style
-from espnet2.legacy.utils.io_utils import SoundHDF5File
+from espnet3.legacy.utils.cli_utils import assert_scipy_wav_style
+from espnet3.legacy.utils.io_utils import SoundHDF5File
 
 
 def file_writer_helper(

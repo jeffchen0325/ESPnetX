@@ -524,7 +524,7 @@ def _write_meta(
         "files": files,
         "yaml_files": yaml_files,
         "torch": str(torch.__version__),
-        "espnet": str(espnet2.__version__),
+        "espnet": str(espnet3.__version__),
         "python": sys.version,
     }
     (out_dir / "meta.yaml").write_text(OmegaConf.to_yaml(meta), encoding="utf-8")

@@ -28,22 +28,22 @@ import torch
 from torch.utils.data.dataset import Dataset
 from typeguard import typechecked
 
-from espnet2.fileio.multi_sound_scp import MultiSoundScpReader
-from espnet2.fileio.npy_scp import NpyScpReader
-from espnet2.fileio.rand_gen_dataset import (
+from espnet3.fileio.multi_sound_scp import MultiSoundScpReader
+from espnet3.fileio.npy_scp import NpyScpReader
+from espnet3.fileio.rand_gen_dataset import (
     FloatRandomGenerateDataset,
     IntRandomGenerateDataset,
 )
-from espnet2.fileio.read_text import (
+from espnet3.fileio.read_text import (
     RandomTextReader,
     load_num_sequence_text,
     read_2columns_text,
     read_label,
 )
-from espnet2.fileio.rttm import RttmReader
-from espnet2.fileio.score_scp import SingingScoreReader
-from espnet2.fileio.sound_scp import SoundScpReader
-from espnet2.utils.sized_dict import SizedDict
+from espnet3.fileio.rttm import RttmReader
+from espnet3.fileio.score_scp import SingingScoreReader
+from espnet3.fileio.sound_scp import SoundScpReader
+from espnet3.utils.sized_dict import SizedDict
 
 
 class AdapterForSoundScpReader(collections.abc.Mapping):
@@ -609,7 +609,7 @@ class ESPnetDataset(AbsDataset):
         # 2. [Option] Apply preprocessing
         if getattr(self, "install_speaker_prompt", None) is not None:
             self.install_speaker_prompt(uid, data)
-        #   e.g. espnet2.train.preprocessor:CommonPreprocessor
+        #   e.g. espnet3.train.preprocessor:CommonPreprocessor
         if self.preprocess is not None:
             key_prefix = self.task + " " if hasattr(self, "task") else ""
             data = self.preprocess(key_prefix + uid, data)

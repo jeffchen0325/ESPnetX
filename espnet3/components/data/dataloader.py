@@ -163,11 +163,11 @@ class DataLoaderBuilder:
             dataloader:
             train:
                 iter_factory:
-                _target_: espnet2.iterators.sequence_iter_factory.SequenceIterFactory
+                _target_: espnet3.iterators.sequence_iter_factory.SequenceIterFactory
                 shuffle: true
                 collate_fn: ${dataloader.collate_fn}
                 batches:
-                    _target_: espnet2.samplers.build_batch_sampler.build_batch_sampler
+                    _target_: espnet3.samplers.build_batch_sampler.build_batch_sampler
                     type: numel
                     shape_files:
                     batch_bins: 4000000

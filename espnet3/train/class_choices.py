@@ -2,8 +2,8 @@ from typing import Mapping, Optional, Tuple, Type
 
 from typeguard import typechecked
 
-from espnet2.utils.nested_dict_action import NestedDictAction
-from espnet2.utils.types import str_or_none
+from espnet3.utils.nested_dict_action import NestedDictAction
+from espnet3.utils.types import str_or_none
 
 
 class ClassChoices:

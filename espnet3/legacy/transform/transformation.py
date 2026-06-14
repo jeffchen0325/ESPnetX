@@ -9,31 +9,31 @@ from inspect import signature
 
 import yaml
 
-from espnet2.legacy.utils.dynamic_import import dynamic_import
+from espnet3.legacy.utils.dynamic_import import dynamic_import
 
 # TODO(karita): inherit TransformInterface
 # TODO(karita): register cmd arguments in asr_train.py
 import_alias = dict(
-    identity="espnet2.legacy.transform.transform_interface:Identity",
-    time_warp="espnet2.legacy.transform.spec_augment:TimeWarp",
-    time_mask="espnet2.legacy.transform.spec_augment:TimeMask",
-    freq_mask="espnet2.legacy.transform.spec_augment:FreqMask",
-    spec_augment="espnet2.legacy.transform.spec_augment:SpecAugment",
-    speed_perturbation="espnet2.legacy.transform.perturb:SpeedPerturbation",
-    volume_perturbation="espnet2.legacy.transform.perturb:VolumePerturbation",
-    noise_injection="espnet2.legacy.transform.perturb:NoiseInjection",
-    bandpass_perturbation="espnet2.legacy.transform.perturb:BandpassPerturbation",
-    rir_convolve="espnet2.legacy.transform.perturb:RIRConvolve",
-    delta="espnet2.legacy.transform.add_deltas:AddDeltas",
-    cmvn="espnet2.legacy.transform.cmvn:CMVN",
-    utterance_cmvn="espnet2.legacy.transform.cmvn:UtteranceCMVN",
-    fbank="espnet2.legacy.transform.spectrogram:LogMelSpectrogram",
-    spectrogram="espnet2.legacy.transform.spectrogram:Spectrogram",
-    stft="espnet2.legacy.transform.spectrogram:Stft",
-    istft="espnet2.legacy.transform.spectrogram:IStft",
-    stft2fbank="espnet2.legacy.transform.spectrogram:Stft2LogMelSpectrogram",
-    wpe="espnet2.legacy.transform.wpe:WPE",
-    channel_selector="espnet2.legacy.transform.channel_selector:ChannelSelector",
+    identity="espnet3.legacy.transform.transform_interface:Identity",
+    time_warp="espnet3.legacy.transform.spec_augment:TimeWarp",
+    time_mask="espnet3.legacy.transform.spec_augment:TimeMask",
+    freq_mask="espnet3.legacy.transform.spec_augment:FreqMask",
+    spec_augment="espnet3.legacy.transform.spec_augment:SpecAugment",
+    speed_perturbation="espnet3.legacy.transform.perturb:SpeedPerturbation",
+    volume_perturbation="espnet3.legacy.transform.perturb:VolumePerturbation",
+    noise_injection="espnet3.legacy.transform.perturb:NoiseInjection",
+    bandpass_perturbation="espnet3.legacy.transform.perturb:BandpassPerturbation",
+    rir_convolve="espnet3.legacy.transform.perturb:RIRConvolve",
+    delta="espnet3.legacy.transform.add_deltas:AddDeltas",
+    cmvn="espnet3.legacy.transform.cmvn:CMVN",
+    utterance_cmvn="espnet3.legacy.transform.cmvn:UtteranceCMVN",
+    fbank="espnet3.legacy.transform.spectrogram:LogMelSpectrogram",
+    spectrogram="espnet3.legacy.transform.spectrogram:Spectrogram",
+    stft="espnet3.legacy.transform.spectrogram:Stft",
+    istft="espnet3.legacy.transform.spectrogram:IStft",
+    stft2fbank="espnet3.legacy.transform.spectrogram:Stft2LogMelSpectrogram",
+    wpe="espnet3.legacy.transform.wpe:WPE",
+    channel_selector="espnet3.legacy.transform.channel_selector:ChannelSelector",
 )
 
 

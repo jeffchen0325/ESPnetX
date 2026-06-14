@@ -6,7 +6,7 @@ import numpy as np
 import soundfile
 from typeguard import typechecked
 
-from espnet2.fileio.read_text import read_2columns_text, read_multi_columns_text
+from espnet3.fileio.read_text import read_2columns_text, read_multi_columns_text
 
 
 def soundfile_read(

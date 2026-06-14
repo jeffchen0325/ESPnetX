@@ -3,7 +3,7 @@ from typing import Tuple
 import librosa
 import torch
 
-from espnet2.legacy.nets.pytorch_backend.nets_utils import make_pad_mask
+from espnet3.legacy.nets.pytorch_backend.nets_utils import make_pad_mask
 
 
 class LogMel(torch.nn.Module):

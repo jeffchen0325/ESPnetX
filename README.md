@@ -6,7 +6,9 @@ espnet3
 
 本项目从官方 ESPnet 仓库中提取了 `espnet3` 模块，并进行了独立打包。它移除了对旧版本代码的依赖，专注于提供简洁、高效的语音识别（ASR）、语音合成（TTS）等任务的训练和推理流程。
 
-本项目内嵌了 espnet_model_zoo 的源代码以避免依赖冲突 。
+本项目内嵌了 espnet_model_zoo 的源代码以简洁包依赖 。
+
+本项目准备内嵌 espnet-tts-frontend 简洁包依赖（ongoing） 。
 
 ## 安装
 
@@ -25,7 +27,5 @@ espnet3
 
 ```bash
 cd espnet3/egs3/mini_an4/asr
-python run.py \
-    --stages train \
-    --training_config conf/train.yaml
+python run.py
 ```

@@ -3,13 +3,13 @@ from typing import List, Optional
 import torch
 from typeguard import typechecked
 
-from espnet2.asr.frontend.s3prl import S3prlFrontend
-from espnet2.layers.create_adapter_utils import (
+from espnet3.asr.frontend.s3prl import S3prlFrontend
+from espnet3.layers.create_adapter_utils import (
     check_target_module_exists,
     get_submodules,
     replace_module,
 )
-from espnet2.layers.houlsby_adapter_layer import (
+from espnet3.layers.houlsby_adapter_layer import (
     Houlsby_Adapter,
     HoulsbyTransformerSentenceEncoderLayer,
 )

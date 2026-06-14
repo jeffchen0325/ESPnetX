@@ -571,7 +571,7 @@ def rename_state_dict(
 def get_activation(act):
     """Return activation function."""
     # Lazy load to avoid unused import
-    from espnet2.legacy.nets.pytorch_backend.conformer.swish import Swish
+    from espnet3.legacy.nets.pytorch_backend.conformer.swish import Swish
 
     activation_funcs = {
         "hardtanh": torch.nn.Hardtanh,

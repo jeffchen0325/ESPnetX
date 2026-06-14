@@ -5,7 +5,7 @@
 
 import torch
 
-from espnet2.legacy.nets.pytorch_backend.nets_utils import make_non_pad_mask
+from espnet3.legacy.nets.pytorch_backend.nets_utils import make_non_pad_mask
 
 
 class GuidedAttentionLoss(torch.nn.Module):

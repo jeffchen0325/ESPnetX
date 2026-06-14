@@ -21,24 +21,24 @@ except ImportError:
     from torch.cuda.amp import GradScaler
 from typeguard import typechecked
 
-from espnet2.iterators.abs_iter_factory import AbsIterFactory
-from espnet2.main_funcs.average_nbest_models import average_nbest_models
-from espnet2.main_funcs.calculate_all_attentions import calculate_all_attentions
-from espnet2.schedulers.abs_scheduler import (
+from espnet3.iterators.abs_iter_factory import AbsIterFactory
+from espnet3.main_funcs.average_nbest_models import average_nbest_models
+from espnet3.main_funcs.calculate_all_attentions import calculate_all_attentions
+from espnet3.schedulers.abs_scheduler import (
     AbsBatchStepScheduler,
     AbsEpochStepScheduler,
     AbsScheduler,
     AbsValEpochStepScheduler,
 )
-from espnet2.torch_utils.add_gradient_noise import add_gradient_noise
-from espnet2.torch_utils.device_funcs import to_device
-from espnet2.torch_utils.recursive_op import recursive_average
-from espnet2.torch_utils.set_all_random_seed import set_all_random_seed
-from espnet2.train.abs_espnet_model import AbsESPnetModel
-from espnet2.train.distributed_utils import DistributedOption
-from espnet2.train.reporter import Reporter, SubReporter
-from espnet2.utils.build_dataclass import build_dataclass
-from espnet2.utils.kwargs2args import kwargs2args
+from espnet3.torch_utils.add_gradient_noise import add_gradient_noise
+from espnet3.torch_utils.device_funcs import to_device
+from espnet3.torch_utils.recursive_op import recursive_average
+from espnet3.torch_utils.set_all_random_seed import set_all_random_seed
+from espnet3.train.abs_espnet_model import AbsESPnetModel
+from espnet3.train.distributed_utils import DistributedOption
+from espnet3.train.reporter import Reporter, SubReporter
+from espnet3.utils.build_dataclass import build_dataclass
+from espnet3.utils.kwargs2args import kwargs2args
 
 if torch.distributed.is_available():
     from torch.distributed import ReduceOp

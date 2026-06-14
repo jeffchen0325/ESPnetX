@@ -15,8 +15,8 @@ from typing import Any, Dict, List, NamedTuple, Tuple, Union
 
 import torch
 
-from espnet2.legacy.nets.batch_beam_search import BatchBeamSearch, BatchHypothesis
-from espnet2.legacy.nets.e2e_asr_common import end_detect
+from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch, BatchHypothesis
+from espnet3.legacy.nets.e2e_asr_common import end_detect
 
 
 class Hypothesis(NamedTuple):

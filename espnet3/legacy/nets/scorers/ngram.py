@@ -5,7 +5,7 @@ from abc import ABC
 import kenlm
 import torch
 
-from espnet2.legacy.nets.scorer_interface import (
+from espnet3.legacy.nets.scorer_interface import (
     BatchScorerInterface,
     PartialScorerInterface,
 )

@@ -8,7 +8,7 @@ import h5py
 import kaldiio
 import soundfile
 
-from espnet2.legacy.utils.io_utils import SoundHDF5File
+from espnet3.legacy.utils.io_utils import SoundHDF5File
 
 
 def file_reader_helper(

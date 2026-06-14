@@ -4,9 +4,9 @@ import torch
 from torch_complex.tensor import ComplexTensor
 from typeguard import typechecked
 
-from espnet2.enh.layers.complex_utils import to_complex
-from espnet2.layers.inversible_interface import InversibleInterface
-from espnet2.legacy.nets.pytorch_backend.nets_utils import make_pad_mask
+from espnet3.enh.layers.complex_utils import to_complex
+from espnet3.layers.inversible_interface import InversibleInterface
+from espnet3.legacy.nets.pytorch_backend.nets_utils import make_pad_mask
 
 
 class Stft(torch.nn.Module, InversibleInterface):

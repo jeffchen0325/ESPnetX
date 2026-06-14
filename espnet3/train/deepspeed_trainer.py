@@ -22,15 +22,15 @@ from typing import Dict, Iterable, List, Optional, Sequence, Tuple, Union
 from torch.distributed import ReduceOp
 from typeguard import typechecked
 
-from espnet2.iterators.abs_iter_factory import AbsIterFactory
-from espnet2.main_funcs.average_nbest_models import average_nbest_models
-from espnet2.torch_utils.device_funcs import to_device
-from espnet2.torch_utils.recursive_op import recursive_average
-from espnet2.torch_utils.set_all_random_seed import set_all_random_seed
-from espnet2.train.abs_espnet_model import AbsESPnetModel
-from espnet2.train.reporter import Reporter, SubReporter
-from espnet2.train.trainer import Trainer
-from espnet2.utils.build_dataclass import build_dataclass
+from espnet3.iterators.abs_iter_factory import AbsIterFactory
+from espnet3.main_funcs.average_nbest_models import average_nbest_models
+from espnet3.torch_utils.device_funcs import to_device
+from espnet3.torch_utils.recursive_op import recursive_average
+from espnet3.torch_utils.set_all_random_seed import set_all_random_seed
+from espnet3.train.abs_espnet_model import AbsESPnetModel
+from espnet3.train.reporter import Reporter, SubReporter
+from espnet3.train.trainer import Trainer
+from espnet3.utils.build_dataclass import build_dataclass
 
 
 @dataclasses.dataclass
