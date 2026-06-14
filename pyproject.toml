@@ -1,8 +1,8 @@
 [project]
-name = "espnet3"
+name = "espnetX"
 dynamic = ["version", "readme"]
 authors = []
-description = "ESPnet3: end-to-end speech processing toolkit version 3"
+description = "ESPnetX: end-to-end speech processing toolkit version X"
 classifiers = [
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
@@ -22,7 +22,6 @@ license = { "text" = "Apache Software License" }
 # We can use newer setuptools after removing chainer support.
 # We didn't specify torch-related packages as it highly depends on environment.
 dependencies = [
-    # ESPnet-2 and ESPnet-3 dependencies
     "setuptools>=38.5.1,<74.0.0",
     "configargparse>=1.2.1",
     "packaging",
@@ -44,8 +43,6 @@ dependencies = [
     # "espnet_model_zoo",
     "matplotlib",
     "nltk>=3.4.5",
-
-    # ESPnet-3 related
     "hydra-core",
     "omegaconf",
     "datasets",
@@ -58,7 +55,7 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/jeffchen0325/espnet"
+Homepage = "https://github.com/jeffchen0325/ESPnetX"
 
 [build-system]
 requires = ["setuptools>=38.5.1,<74.0.0", "wheel", "setuptools-scm>=8.0,<9.0"]
@@ -69,7 +66,7 @@ version = {file = "version.txt"}
 readme = {file = ["README.md"], content-type = "text/markdown"}
 
 [tool.setuptools.packages.find]
-include = ["espnet3*", "egs3*", "TEMPLATE*"]
+include = ["espnet3*", "egs3*", "TEMPLATE*", "tools*"]
 
 [tool.setuptools.package-data]
 egs3 = ["TEMPLATE/**/*.yaml"]
@@ -86,7 +83,7 @@ asr = [
 tts = [
   "pyworld>=0.3.4",
   "pypinyin<=0.44.0",
-  "espnet_tts_frontend",
+  "espnet_tts_frontend",    # To be removed later
   "g2p_en @ git+https://github.com/espnet/g2p.git@master",
   "jamo==0.4.1",
   "jaconv",
@@ -118,24 +115,20 @@ spk = [
   "asteroid_filterbanks==0.4.0"
 ]
 
-# egs2 = [
-#   "gdown",
-#   "resampy",
-#   "pysptk>=0.2.1",
-#   "morfessor",
-#   "youtube_dl",
-#   "nnmnkwii",
-#   "museval>=0.2.1",
-#   "pystoi>=0.2.2",
-#   "mir-eval>=0.6",
-#   "fastdtw",
-#   "nara_wpe>=0.0.5",
-#   "sacrebleu>=1.5.1",
-#   "praatio>=6,<7",
-#   "scikit-learn>=1.0.0",
-# ]
-
 egs3 = [
+  "gdown",
+  "resampy",
+  "pysptk>=0.2.1",
+  "morfessor",
+  "youtube_dl",
+  "nnmnkwii",
+  "museval>=0.2.1",
+  "pystoi>=0.2.2",
+  "mir-eval>=0.6",
+  "fastdtw",
+  "nara_wpe>=0.0.5",
+  "sacrebleu>=1.5.1",
+  "praatio>=6,<7",
   "scikit-learn>=1.0.0",
 ]
 
@@ -193,13 +186,12 @@ doc = [
 ]
 
 all = [
-  "espnet3[asr]",
-  "espnet3[tts]",
-  "espnet3[enh]",
-  "espnet3[spk]",
-  "espnet3[speechlm]",
-  # "espnet[egs2]",
-  "espnet3[egs3]",
+  "espnetX[asr]",
+  "espnetX[tts]",
+  "espnetX[enh]",
+  "espnetX[spk]",
+  "espnetX[speechlm]",
+  "espnetX[egs3]",
   "fairscale",
   "transformers",
   "evaluate",
