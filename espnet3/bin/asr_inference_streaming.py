@@ -10,10 +10,10 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.encoder.contextual_block_conformer_encoder import (  # noqa: H301
+from espnet3.models.asr.encoder.contextual_block_conformer_encoder import (  # noqa: H301
     ContextualBlockConformerEncoder,
 )
-from espnet3.espnet_models.asr.encoder.contextual_block_transformer_encoder import (  # noqa: H301
+from espnet3.models.asr.encoder.contextual_block_transformer_encoder import (  # noqa: H301
     ContextualBlockTransformerEncoder,
 )
 from espnet3.fileio.datadir_writer import DatadirWriter

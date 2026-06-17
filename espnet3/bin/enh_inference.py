@@ -14,13 +14,13 @@ import yaml
 from tqdm import trange
 from typeguard import typechecked
 
-from espnet3.espnet_models.enh.diffusion_enh import ESPnetDiffusionModel
-from espnet3.espnet_models.enh.loss.criterions.tf_domain import FrequencyDomainMSE
-from espnet3.espnet_models.enh.loss.criterions.time_domain import SISNRLoss
-from espnet3.espnet_models.enh.loss.wrappers.pit_solver import PITSolver
-from espnet3.espnet_models.enh.separator.bsrnn_separator import BSRNNSeparator
-from espnet3.espnet_models.enh.separator.tfgridnetv3_separator import TFGridNetV3
-from espnet3.espnet_models.enh.separator.uses_separator import USESSeparator
+from espnet3.models.enh.diffusion_enh import ESPnetDiffusionModel
+from espnet3.models.enh.loss.criterions.tf_domain import FrequencyDomainMSE
+from espnet3.models.enh.loss.criterions.time_domain import SISNRLoss
+from espnet3.models.enh.loss.wrappers.pit_solver import PITSolver
+from espnet3.models.enh.separator.bsrnn_separator import BSRNNSeparator
+from espnet3.models.enh.separator.tfgridnetv3_separator import TFGridNetV3
+from espnet3.models.enh.separator.uses_separator import USESSeparator
 from espnet3.fileio.sound_scp import SoundScpWriter
 from espnet3.legacy.utils.cli_utils import get_commandline_args
 from espnet3.tasks.enh import EnhancementTask

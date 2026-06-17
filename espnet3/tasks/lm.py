@@ -6,12 +6,12 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.lm.abs_model import AbsLM
-from espnet3.espnet_models.lm.espnet_model import ESPnetLanguageModel
-from espnet3.espnet_models.lm.espnet_model_multitask import ESPnetMultitaskLanguageModel
-from espnet3.espnet_models.lm.huggingface_pretrained_opt_lm import HuggingfaceOPTModel
-from espnet3.espnet_models.lm.seq_rnn_lm import SequentialRNNLM
-from espnet3.espnet_models.lm.transformer_lm import TransformerLM
+from espnet3.models.lm.abs_model import AbsLM
+from espnet3.models.lm.espnet_model import ESPnetLanguageModel
+from espnet3.models.lm.espnet_model_multitask import ESPnetMultitaskLanguageModel
+from espnet3.models.lm.huggingface_pretrained_opt_lm import HuggingfaceOPTModel
+from espnet3.models.lm.seq_rnn_lm import SequentialRNNLM
+from espnet3.models.lm.transformer_lm import TransformerLM
 from espnet3.tasks.abs_task import AbsTask
 from espnet3.text.phoneme_tokenizer import g2p_choices
 from espnet3.torch_utils.initialize import initialize

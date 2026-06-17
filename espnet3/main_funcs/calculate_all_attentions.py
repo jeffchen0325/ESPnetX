@@ -3,7 +3,7 @@ from typing import Dict, List
 
 import torch
 
-from espnet3.espnet_models.gan_tts.jets.alignments import AlignmentModule
+from espnet3.models.gan_tts.jets.alignments import AlignmentModule
 from espnet3.legacy.nets.pytorch_backend.rnn.attentions import (
     AttAdd,
     AttCov,

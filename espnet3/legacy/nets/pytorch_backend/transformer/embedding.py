@@ -11,7 +11,7 @@ import math
 
 import torch
 
-from espnet3.espnet_models.asr.frontend.cnn import dim_1_layer_norm
+from espnet3.models.asr.frontend.cnn import dim_1_layer_norm
 
 
 def _pre_hook(

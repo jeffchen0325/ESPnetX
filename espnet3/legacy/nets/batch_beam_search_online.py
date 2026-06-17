@@ -8,7 +8,7 @@ from typing import Tuple  # noqa: H301
 
 import torch
 
-from espnet3.espnet_models.asr.transducer.beam_search_transducer_streaming import (
+from espnet3.models.asr.transducer.beam_search_transducer_streaming import (
     BeamSearchTransducerStreaming,
 )
 from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch, BatchHypothesis

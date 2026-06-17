@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.maskctc_model import MaskCTCInference
+from espnet3.models.asr.maskctc_model import MaskCTCInference
 from espnet3.fileio.datadir_writer import DatadirWriter
 from espnet3.legacy.nets.beam_search import Hypothesis
 from espnet3.legacy.nets.pytorch_backend.transformer.subsampling import TooShortUttError

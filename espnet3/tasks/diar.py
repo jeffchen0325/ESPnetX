@@ -5,21 +5,21 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.encoder.abs_encoder import AbsEncoder
-from espnet3.espnet_models.asr.encoder.conformer_encoder import ConformerEncoder
-from espnet3.espnet_models.asr.encoder.rnn_encoder import RNNEncoder
-from espnet3.espnet_models.asr.encoder.transformer_encoder import TransformerEncoder
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
-from espnet3.espnet_models.diar.attractor.abs_attractor import AbsAttractor
-from espnet3.espnet_models.diar.attractor.rnn_attractor import RnnAttractor
-from espnet3.espnet_models.diar.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.diar.decoder.linear_decoder import LinearDecoder
-from espnet3.espnet_models.diar.espnet_model import ESPnetDiarizationModel
+from espnet3.models.asr.encoder.abs_encoder import AbsEncoder
+from espnet3.models.asr.encoder.conformer_encoder import ConformerEncoder
+from espnet3.models.asr.encoder.rnn_encoder import RNNEncoder
+from espnet3.models.asr.encoder.transformer_encoder import TransformerEncoder
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
+from espnet3.models.diar.attractor.abs_attractor import AbsAttractor
+from espnet3.models.diar.attractor.rnn_attractor import RnnAttractor
+from espnet3.models.diar.decoder.abs_decoder import AbsDecoder
+from espnet3.models.diar.decoder.linear_decoder import LinearDecoder
+from espnet3.models.diar.espnet_model import ESPnetDiarizationModel
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.label_aggregation import LabelAggregate

@@ -5,27 +5,27 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.encoder.abs_encoder import AbsEncoder
+from espnet3.models.asr.encoder.abs_encoder import AbsEncoder
 
 # TODO(checkpoint1): import conformer class class
-from espnet3.espnet_models.asr.encoder.transformer_encoder import TransformerEncoder
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.fused import FusedFrontends
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.preencoder.abs_preencoder import AbsPreEncoder
-from espnet3.espnet_models.asr.preencoder.linear import LinearProjection
-from espnet3.espnet_models.asr.preencoder.sinc import LightweightSincConvs
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
-from espnet3.espnet_models.asvspoof.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.asvspoof.decoder.linear_decoder import LinearDecoder
-from espnet3.espnet_models.asvspoof.espnet_model import ESPnetASVSpoofModel
-from espnet3.espnet_models.asvspoof.loss.abs_loss import AbsASVSpoofLoss
-from espnet3.espnet_models.asvspoof.loss.am_softmax_loss import ASVSpoofAMSoftmaxLoss
-from espnet3.espnet_models.asvspoof.loss.binary_loss import ASVSpoofBinaryLoss
-from espnet3.espnet_models.asvspoof.loss.oc_softmax_loss import ASVSpoofOCSoftmaxLoss
+from espnet3.models.asr.encoder.transformer_encoder import TransformerEncoder
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.fused import FusedFrontends
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.preencoder.abs_preencoder import AbsPreEncoder
+from espnet3.models.asr.preencoder.linear import LinearProjection
+from espnet3.models.asr.preencoder.sinc import LightweightSincConvs
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
+from espnet3.models.asvspoof.decoder.abs_decoder import AbsDecoder
+from espnet3.models.asvspoof.decoder.linear_decoder import LinearDecoder
+from espnet3.models.asvspoof.espnet_model import ESPnetASVSpoofModel
+from espnet3.models.asvspoof.loss.abs_loss import AbsASVSpoofLoss
+from espnet3.models.asvspoof.loss.am_softmax_loss import ASVSpoofAMSoftmaxLoss
+from espnet3.models.asvspoof.loss.binary_loss import ASVSpoofBinaryLoss
+from espnet3.models.asvspoof.loss.oc_softmax_loss import ASVSpoofOCSoftmaxLoss
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.utterance_mvn import UtteranceMVN

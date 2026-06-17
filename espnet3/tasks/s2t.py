@@ -6,65 +6,65 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.ctc import CTC
-from espnet3.espnet_models.asr.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.asr.decoder.hugging_face_transformers_decoder import (  # noqa: H301
+from espnet3.models.asr.ctc import CTC
+from espnet3.models.asr.decoder.abs_decoder import AbsDecoder
+from espnet3.models.asr.decoder.hugging_face_transformers_decoder import (  # noqa: H301
     HuggingFaceTransformersDecoder,
 )
-from espnet3.espnet_models.asr.decoder.mlm_decoder import MLMDecoder
-from espnet3.espnet_models.asr.decoder.rnn_decoder import RNNDecoder
-from espnet3.espnet_models.asr.decoder.s4_decoder import S4Decoder
-from espnet3.espnet_models.asr.decoder.transformer_decoder import (
+from espnet3.models.asr.decoder.mlm_decoder import MLMDecoder
+from espnet3.models.asr.decoder.rnn_decoder import RNNDecoder
+from espnet3.models.asr.decoder.s4_decoder import S4Decoder
+from espnet3.models.asr.decoder.transformer_decoder import (
     DynamicConvolution2DTransformerDecoder,
     DynamicConvolutionTransformerDecoder,
     LightweightConvolution2DTransformerDecoder,
     LightweightConvolutionTransformerDecoder,
     TransformerDecoder,
 )
-from espnet3.espnet_models.asr.decoder.whisper_decoder import OpenAIWhisperDecoder
-from espnet3.espnet_models.asr.encoder.abs_encoder import AbsEncoder
-from espnet3.espnet_models.asr.encoder.branchformer_encoder import BranchformerEncoder
-from espnet3.espnet_models.asr.encoder.conformer_encoder import ConformerEncoder
-from espnet3.espnet_models.asr.encoder.contextual_block_conformer_encoder import (
+from espnet3.models.asr.decoder.whisper_decoder import OpenAIWhisperDecoder
+from espnet3.models.asr.encoder.abs_encoder import AbsEncoder
+from espnet3.models.asr.encoder.branchformer_encoder import BranchformerEncoder
+from espnet3.models.asr.encoder.conformer_encoder import ConformerEncoder
+from espnet3.models.asr.encoder.contextual_block_conformer_encoder import (
     ContextualBlockConformerEncoder,
 )
-from espnet3.espnet_models.asr.encoder.contextual_block_transformer_encoder import (
+from espnet3.models.asr.encoder.contextual_block_transformer_encoder import (
     ContextualBlockTransformerEncoder,
 )
-from espnet3.espnet_models.asr.encoder.e_branchformer_encoder import EBranchformerEncoder
-from espnet3.espnet_models.asr.encoder.hubert_encoder import (
+from espnet3.models.asr.encoder.e_branchformer_encoder import EBranchformerEncoder
+from espnet3.models.asr.encoder.hubert_encoder import (
     FairseqHubertEncoder,
     FairseqHubertPretrainEncoder,
     TorchAudioHuBERTPretrainEncoder,
 )
-from espnet3.espnet_models.asr.encoder.longformer_encoder import LongformerEncoder
-from espnet3.espnet_models.asr.encoder.rnn_encoder import RNNEncoder
-from espnet3.espnet_models.asr.encoder.transformer_encoder import TransformerEncoder
-from espnet3.espnet_models.asr.encoder.transformer_encoder_multispkr import (
+from espnet3.models.asr.encoder.longformer_encoder import LongformerEncoder
+from espnet3.models.asr.encoder.rnn_encoder import RNNEncoder
+from espnet3.models.asr.encoder.transformer_encoder import TransformerEncoder
+from espnet3.models.asr.encoder.transformer_encoder_multispkr import (
     TransformerEncoder as TransformerEncoderMultiSpkr,
 )
-from espnet3.espnet_models.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
-from espnet3.espnet_models.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
-from espnet3.espnet_models.asr.encoder.whisper_encoder import OpenAIWhisperEncoder
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.fused import FusedFrontends
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
-from espnet3.espnet_models.asr.frontend.whisper import WhisperFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.postencoder.abs_postencoder import AbsPostEncoder
-from espnet3.espnet_models.asr.postencoder.hugging_face_transformers_postencoder import (
+from espnet3.models.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
+from espnet3.models.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
+from espnet3.models.asr.encoder.whisper_encoder import OpenAIWhisperEncoder
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.fused import FusedFrontends
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.whisper import WhisperFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.postencoder.abs_postencoder import AbsPostEncoder
+from espnet3.models.asr.postencoder.hugging_face_transformers_postencoder import (
     HuggingFaceTransformersPostEncoder,
 )
-from espnet3.espnet_models.asr.preencoder.abs_preencoder import AbsPreEncoder
-from espnet3.espnet_models.asr.preencoder.linear import LinearProjection
-from espnet3.espnet_models.asr.preencoder.sinc import LightweightSincConvs
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
+from espnet3.models.asr.preencoder.abs_preencoder import AbsPreEncoder
+from espnet3.models.asr.preencoder.linear import LinearProjection
+from espnet3.models.asr.preencoder.sinc import LightweightSincConvs
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.utterance_mvn import UtteranceMVN
-from espnet3.espnet_models.s2t.espnet_model import ESPnetS2TModel
+from espnet3.models.s2t.espnet_model import ESPnetS2TModel
 from espnet3.tasks.abs_task import AbsTask
 from espnet3.text.phoneme_tokenizer import g2p_choices
 from espnet3.torch_utils.initialize import initialize

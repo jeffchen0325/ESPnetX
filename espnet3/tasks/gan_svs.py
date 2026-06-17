@@ -12,17 +12,17 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.gan_svs.abs_gan_svs import AbsGANSVS
-from espnet3.espnet_models.gan_svs.espnet_model import ESPnetGANSVSModel
-from espnet3.espnet_models.gan_svs.joint import JointScore2Wav
-from espnet3.espnet_models.gan_svs.post_frontend.fused import FusedPostFrontends
-from espnet3.espnet_models.gan_svs.post_frontend.s3prl import S3prlPostFrontend
-from espnet3.espnet_models.gan_svs.vits import VITS
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.gan_svs.abs_gan_svs import AbsGANSVS
+from espnet3.models.gan_svs.espnet_model import ESPnetGANSVSModel
+from espnet3.models.gan_svs.joint import JointScore2Wav
+from espnet3.models.gan_svs.post_frontend.fused import FusedPostFrontends
+from espnet3.models.gan_svs.post_frontend.s3prl import S3prlPostFrontend
+from espnet3.models.gan_svs.vits import VITS
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.utterance_mvn import UtteranceMVN
-from espnet3.espnet_models.svs.feats_extract.score_feats_extract import (
+from espnet3.models.svs.feats_extract.score_feats_extract import (
     FrameScoreFeats,
     SyllableScoreFeats,
 )
@@ -32,13 +32,13 @@ from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn
 from espnet3.train.gan_trainer import GANTrainer
 from espnet3.train.preprocessor import SVSPreprocessor
-from espnet3.espnet_models.tts.feats_extract.abs_feats_extract import AbsFeatsExtract
-from espnet3.espnet_models.tts.feats_extract.dio import Dio
-from espnet3.espnet_models.tts.feats_extract.energy import Energy
-from espnet3.espnet_models.tts.feats_extract.linear_spectrogram import LinearSpectrogram
-from espnet3.espnet_models.tts.feats_extract.log_mel_fbank import LogMelFbank
-from espnet3.espnet_models.tts.feats_extract.log_spectrogram import LogSpectrogram
-from espnet3.espnet_models.tts.feats_extract.ying import Ying
+from espnet3.models.tts.feats_extract.abs_feats_extract import AbsFeatsExtract
+from espnet3.models.tts.feats_extract.dio import Dio
+from espnet3.models.tts.feats_extract.energy import Energy
+from espnet3.models.tts.feats_extract.linear_spectrogram import LinearSpectrogram
+from espnet3.models.tts.feats_extract.log_mel_fbank import LogMelFbank
+from espnet3.models.tts.feats_extract.log_spectrogram import LogSpectrogram
+from espnet3.models.tts.feats_extract.ying import Ying
 from espnet3.utils.get_default_kwargs import get_default_kwargs
 from espnet3.utils.nested_dict_action import NestedDictAction
 from espnet3.utils.types import int_or_none, str2bool, str_or_none

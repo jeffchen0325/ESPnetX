@@ -10,9 +10,9 @@ import torch
 import yaml
 from typeguard import typechecked
 
-from espnet3.espnet_models.gan_tts.jets import JETS
-from espnet3.espnet_models.gan_tts.joint import JointText2Wav
-from espnet3.espnet_models.gan_tts.vits import VITS
+from espnet3.models.gan_tts.jets import JETS
+from espnet3.models.gan_tts.joint import JointText2Wav
+from espnet3.models.gan_tts.vits import VITS
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.tasks.abs_task import AbsTask
@@ -21,20 +21,20 @@ from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn
 from espnet3.train.preprocessor import CommonPreprocessor
 from espnet3.train.trainer import Trainer
-from espnet3.espnet_models.tts.abs_tts import AbsTTS
-from espnet3.espnet_models.tts.espnet_model import ESPnetTTSModel
-from espnet3.espnet_models.tts.fastspeech import FastSpeech
-from espnet3.espnet_models.tts.fastspeech2 import FastSpeech2
-from espnet3.espnet_models.tts.feats_extract.abs_feats_extract import AbsFeatsExtract
-from espnet3.espnet_models.tts.feats_extract.dio import Dio
-from espnet3.espnet_models.tts.feats_extract.energy import Energy
-from espnet3.espnet_models.tts.feats_extract.linear_spectrogram import LinearSpectrogram
-from espnet3.espnet_models.tts.feats_extract.log_mel_fbank import LogMelFbank
-from espnet3.espnet_models.tts.feats_extract.log_spectrogram import LogSpectrogram
-from espnet3.espnet_models.tts.prodiff import ProDiff
-from espnet3.espnet_models.tts.tacotron2 import Tacotron2
-from espnet3.espnet_models.tts.transformer import Transformer
-from espnet3.espnet_models.tts.utils import ParallelWaveGANPretrainedVocoder
+from espnet3.models.tts.abs_tts import AbsTTS
+from espnet3.models.tts.espnet_model import ESPnetTTSModel
+from espnet3.models.tts.fastspeech import FastSpeech
+from espnet3.models.tts.fastspeech2 import FastSpeech2
+from espnet3.models.tts.feats_extract.abs_feats_extract import AbsFeatsExtract
+from espnet3.models.tts.feats_extract.dio import Dio
+from espnet3.models.tts.feats_extract.energy import Energy
+from espnet3.models.tts.feats_extract.linear_spectrogram import LinearSpectrogram
+from espnet3.models.tts.feats_extract.log_mel_fbank import LogMelFbank
+from espnet3.models.tts.feats_extract.log_spectrogram import LogSpectrogram
+from espnet3.models.tts.prodiff import ProDiff
+from espnet3.models.tts.tacotron2 import Tacotron2
+from espnet3.models.tts.transformer import Transformer
+from espnet3.models.tts.utils import ParallelWaveGANPretrainedVocoder
 from espnet3.utils.get_default_kwargs import get_default_kwargs
 from espnet3.utils.griffin_lim import Spectrogram2Waveform
 from espnet3.utils.nested_dict_action import NestedDictAction

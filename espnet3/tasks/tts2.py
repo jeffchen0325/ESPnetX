@@ -24,12 +24,12 @@ from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn
 from espnet3.train.preprocessor import CommonPreprocessor
 from espnet3.train.trainer import Trainer
-from espnet3.espnet_models.tts2.abs_tts2 import AbsTTS2
-from espnet3.espnet_models.tts2.espnet_model import ESPnetTTS2Model
-from espnet3.espnet_models.tts2.fastspeech2 import FastSpeech2Discrete
-from espnet3.espnet_models.tts2.feats_extract.abs_feats_extract import AbsFeatsExtractDiscrete
-from espnet3.espnet_models.tts2.feats_extract.identity import IdentityFeatureExtract
-from espnet3.espnet_models.tts.utils import ParallelWaveGANPretrainedVocoder
+from espnet3.models.tts2.abs_tts2 import AbsTTS2
+from espnet3.models.tts2.espnet_model import ESPnetTTS2Model
+from espnet3.models.tts2.fastspeech2 import FastSpeech2Discrete
+from espnet3.models.tts2.feats_extract.abs_feats_extract import AbsFeatsExtractDiscrete
+from espnet3.models.tts2.feats_extract.identity import IdentityFeatureExtract
+from espnet3.models.tts.utils import ParallelWaveGANPretrainedVocoder
 from espnet3.utils.get_default_kwargs import get_default_kwargs
 from espnet3.utils.griffin_lim import Spectrogram2Waveform  # noqa
 from espnet3.utils.nested_dict_action import NestedDictAction

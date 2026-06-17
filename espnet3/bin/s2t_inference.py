@@ -12,8 +12,8 @@ import torch.nn.functional as F
 import torch.quantization
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.decoder.s4_decoder import S4Decoder
-from espnet3.espnet_models.asr.partially_AR_model import PartiallyARInference
+from espnet3.models.asr.decoder.s4_decoder import S4Decoder
+from espnet3.models.asr.partially_AR_model import PartiallyARInference
 from espnet3.fileio.datadir_writer import DatadirWriter
 from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch
 from espnet3.legacy.nets.beam_search import BeamSearch, Hypothesis

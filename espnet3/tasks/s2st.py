@@ -8,61 +8,61 @@ import torch
 import yaml
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.ctc import CTC
-from espnet3.espnet_models.asr.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.asr.decoder.rnn_decoder import RNNDecoder
-from espnet3.espnet_models.asr.decoder.transformer_decoder import (
+from espnet3.models.asr.ctc import CTC
+from espnet3.models.asr.decoder.abs_decoder import AbsDecoder
+from espnet3.models.asr.decoder.rnn_decoder import RNNDecoder
+from espnet3.models.asr.decoder.transformer_decoder import (
     DynamicConvolution2DTransformerDecoder,
     DynamicConvolutionTransformerDecoder,
     LightweightConvolution2DTransformerDecoder,
     LightweightConvolutionTransformerDecoder,
     TransformerDecoder,
 )
-from espnet3.espnet_models.asr.encoder.abs_encoder import AbsEncoder
-from espnet3.espnet_models.asr.encoder.conformer_encoder import ConformerEncoder
-from espnet3.espnet_models.asr.encoder.contextual_block_transformer_encoder import (
+from espnet3.models.asr.encoder.abs_encoder import AbsEncoder
+from espnet3.models.asr.encoder.conformer_encoder import ConformerEncoder
+from espnet3.models.asr.encoder.contextual_block_transformer_encoder import (
     ContextualBlockTransformerEncoder,
 )
-from espnet3.espnet_models.asr.encoder.hubert_encoder import (
+from espnet3.models.asr.encoder.hubert_encoder import (
     FairseqHubertEncoder,
     FairseqHubertPretrainEncoder,
 )
-from espnet3.espnet_models.asr.encoder.linear_encoder import LinearEncoder
-from espnet3.espnet_models.asr.encoder.rnn_encoder import RNNEncoder
-from espnet3.espnet_models.asr.encoder.transformer_encoder import TransformerEncoder
-from espnet3.espnet_models.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
-from espnet3.espnet_models.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.postencoder.abs_postencoder import AbsPostEncoder
-from espnet3.espnet_models.asr.postencoder.hugging_face_transformers_postencoder import (
+from espnet3.models.asr.encoder.linear_encoder import LinearEncoder
+from espnet3.models.asr.encoder.rnn_encoder import RNNEncoder
+from espnet3.models.asr.encoder.transformer_encoder import TransformerEncoder
+from espnet3.models.asr.encoder.vgg_rnn_encoder import VGGRNNEncoder
+from espnet3.models.asr.encoder.wav2vec2_encoder import FairSeqWav2Vec2Encoder
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.postencoder.abs_postencoder import AbsPostEncoder
+from espnet3.models.asr.postencoder.hugging_face_transformers_postencoder import (
     HuggingFaceTransformersPostEncoder,
 )
-from espnet3.espnet_models.asr.preencoder.abs_preencoder import AbsPreEncoder
-from espnet3.espnet_models.asr.preencoder.linear import LinearProjection
-from espnet3.espnet_models.asr.preencoder.sinc import LightweightSincConvs
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
+from espnet3.models.asr.preencoder.abs_preencoder import AbsPreEncoder
+from espnet3.models.asr.preencoder.linear import LinearProjection
+from espnet3.models.asr.preencoder.sinc import LightweightSincConvs
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.utterance_mvn import UtteranceMVN
-from espnet3.espnet_models.s2st.aux_attention.abs_aux_attention import AbsS2STAuxAttention
-from espnet3.espnet_models.s2st.aux_attention.multihead import MultiHeadAttention
-from espnet3.espnet_models.s2st.espnet_model import ESPnetS2STModel
-from espnet3.espnet_models.s2st.losses.abs_loss import AbsS2STLoss
-from espnet3.espnet_models.s2st.losses.attention_loss import S2STAttentionLoss
-from espnet3.espnet_models.s2st.losses.ctc_loss import S2STCTCLoss
-from espnet3.espnet_models.s2st.losses.guided_attention_loss import S2STGuidedAttentionLoss
-from espnet3.espnet_models.s2st.losses.tacotron_loss import S2STTacotron2Loss
-from espnet3.espnet_models.s2st.synthesizer.abs_synthesizer import AbsSynthesizer
-from espnet3.espnet_models.s2st.synthesizer.discrete_synthesizer import TransformerDiscreteSynthesizer
-from espnet3.espnet_models.s2st.synthesizer.translatotron import Translatotron
-from espnet3.espnet_models.s2st.tgt_feats_extract.abs_tgt_feats_extract import AbsTgtFeatsExtract
-from espnet3.espnet_models.s2st.tgt_feats_extract.linear_spectrogram import LinearSpectrogram
-from espnet3.espnet_models.s2st.tgt_feats_extract.log_mel_fbank import LogMelFbank
-from espnet3.espnet_models.s2st.tgt_feats_extract.log_spectrogram import LogSpectrogram
+from espnet3.models.s2st.aux_attention.abs_aux_attention import AbsS2STAuxAttention
+from espnet3.models.s2st.aux_attention.multihead import MultiHeadAttention
+from espnet3.models.s2st.espnet_model import ESPnetS2STModel
+from espnet3.models.s2st.losses.abs_loss import AbsS2STLoss
+from espnet3.models.s2st.losses.attention_loss import S2STAttentionLoss
+from espnet3.models.s2st.losses.ctc_loss import S2STCTCLoss
+from espnet3.models.s2st.losses.guided_attention_loss import S2STGuidedAttentionLoss
+from espnet3.models.s2st.losses.tacotron_loss import S2STTacotron2Loss
+from espnet3.models.s2st.synthesizer.abs_synthesizer import AbsSynthesizer
+from espnet3.models.s2st.synthesizer.discrete_synthesizer import TransformerDiscreteSynthesizer
+from espnet3.models.s2st.synthesizer.translatotron import Translatotron
+from espnet3.models.s2st.tgt_feats_extract.abs_tgt_feats_extract import AbsTgtFeatsExtract
+from espnet3.models.s2st.tgt_feats_extract.linear_spectrogram import LinearSpectrogram
+from espnet3.models.s2st.tgt_feats_extract.log_mel_fbank import LogMelFbank
+from espnet3.models.s2st.tgt_feats_extract.log_spectrogram import LogSpectrogram
 from espnet3.tasks.st import STTask
 from espnet3.text.phoneme_tokenizer import g2p_choices
 from espnet3.torch_utils.initialize import initialize
@@ -70,7 +70,7 @@ from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn
 from espnet3.train.preprocessor import MutliTokenizerCommonPreprocessor
 from espnet3.train.trainer import Trainer
-from espnet3.espnet_models.tts.utils import ParallelWaveGANPretrainedVocoder
+from espnet3.models.tts.utils import ParallelWaveGANPretrainedVocoder
 from espnet3.utils.get_default_kwargs import get_default_kwargs
 from espnet3.utils.griffin_lim import Spectrogram2Waveform
 from espnet3.utils.nested_dict_action import NestedDictAction

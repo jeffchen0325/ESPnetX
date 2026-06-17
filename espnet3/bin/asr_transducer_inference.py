@@ -14,12 +14,12 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr_transducer.beam_search_transducer import (
+from espnet3.models.asr_transducer.beam_search_transducer import (
     BeamSearchTransducer,
     Hypothesis,
 )
-from espnet3.espnet_models.asr_transducer.frontend.online_audio_processor import OnlineAudioProcessor
-from espnet3.espnet_models.asr_transducer.utils import TooShortUttError
+from espnet3.models.asr_transducer.frontend.online_audio_processor import OnlineAudioProcessor
+from espnet3.models.asr_transducer.utils import TooShortUttError
 from espnet3.fileio.datadir_writer import DatadirWriter
 from espnet3.legacy.utils.cli_utils import get_commandline_args
 from espnet3.tasks.asr_transducer import ASRTransducerTask

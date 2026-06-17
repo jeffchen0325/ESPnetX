@@ -14,19 +14,19 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.encoder.abs_encoder import AbsEncoder
-from espnet3.espnet_models.asr.encoder.hubert_encoder import (  # noqa: H301
+from espnet3.models.asr.encoder.abs_encoder import AbsEncoder
+from espnet3.models.asr.encoder.hubert_encoder import (  # noqa: H301
     FairseqHubertPretrainEncoder,
     TorchAudioHuBERTPretrainEncoder,
 )
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.preencoder.abs_preencoder import AbsPreEncoder
-from espnet3.espnet_models.asr.preencoder.sinc import LightweightSincConvs
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
-from espnet3.espnet_models.hubert.espnet_model import (
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.preencoder.abs_preencoder import AbsPreEncoder
+from espnet3.models.asr.preencoder.sinc import LightweightSincConvs
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
+from espnet3.models.hubert.espnet_model import (
     HubertPretrainModel,
     TorchAudioHubertPretrainModel,
 )

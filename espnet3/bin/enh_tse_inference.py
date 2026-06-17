@@ -13,9 +13,9 @@ import yaml
 from tqdm import trange
 from typeguard import typechecked
 
-from espnet3.espnet_models.enh.loss.criterions.tf_domain import FrequencyDomainMSE
-from espnet3.espnet_models.enh.loss.criterions.time_domain import SISNRLoss
-from espnet3.espnet_models.enh.loss.wrappers.pit_solver import PITSolver
+from espnet3.models.enh.loss.criterions.tf_domain import FrequencyDomainMSE
+from espnet3.models.enh.loss.criterions.time_domain import SISNRLoss
+from espnet3.models.enh.loss.wrappers.pit_solver import PITSolver
 from espnet3.fileio.sound_scp import SoundScpWriter
 from espnet3.legacy.utils.cli_utils import get_commandline_args
 from espnet3.tasks.enh_tse import TargetSpeakerExtractionTask as TSETask

@@ -10,13 +10,13 @@ import torch
 import torch.quantization
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import (
+from espnet3.models.asr.transducer.beam_search_transducer import (
     BeamSearchTransducer,
 )
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import (
+from espnet3.models.asr.transducer.beam_search_transducer import (
     ExtendedHypothesis as ExtTransHypothesis,
 )
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import Hypothesis as TransHypothesis
+from espnet3.models.asr.transducer.beam_search_transducer import Hypothesis as TransHypothesis
 from espnet3.fileio.datadir_writer import DatadirWriter
 from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch
 from espnet3.legacy.nets.batch_beam_search_online_sim import BatchBeamSearchOnlineSim

@@ -17,8 +17,8 @@ from packaging.version import parse as V  # noqa
 from typeguard import typechecked
 
 from espnet3.fileio.npy_scp import NpyScpWriter
-from espnet3.espnet_models.gan_codec.dac import DAC
-from espnet3.espnet_models.gan_codec.soundstream import SoundStream
+from espnet3.models.gan_codec.dac import DAC
+from espnet3.models.gan_codec.soundstream import SoundStream
 from espnet3.legacy.utils.cli_utils import get_commandline_args
 from espnet3.tasks.gan_codec import GANCodecTask
 from espnet3.torch_utils.device_funcs import to_device

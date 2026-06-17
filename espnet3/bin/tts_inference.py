@@ -17,16 +17,16 @@ from packaging.version import parse as V
 from typeguard import typechecked
 
 from espnet3.fileio.npy_scp import NpyScpWriter
-from espnet3.espnet_models.gan_tts.vits import VITS
+from espnet3.models.gan_tts.vits import VITS
 from espnet3.legacy.utils.cli_utils import get_commandline_args
 from espnet3.tasks.tts import TTSTask
 from espnet3.torch_utils.device_funcs import to_device
 from espnet3.torch_utils.set_all_random_seed import set_all_random_seed
-from espnet3.espnet_models.tts.fastspeech import FastSpeech
-from espnet3.espnet_models.tts.fastspeech2 import FastSpeech2
-from espnet3.espnet_models.tts.tacotron2 import Tacotron2
-from espnet3.espnet_models.tts.transformer import Transformer
-from espnet3.espnet_models.tts.utils import DurationCalculator
+from espnet3.models.tts.fastspeech import FastSpeech
+from espnet3.models.tts.fastspeech2 import FastSpeech2
+from espnet3.models.tts.tacotron2 import Tacotron2
+from espnet3.models.tts.transformer import Transformer
+from espnet3.models.tts.utils import DurationCalculator
 from espnet3.utils import config_argparse
 from espnet3.utils.types import str2bool, str2triple_str, str_or_none
 

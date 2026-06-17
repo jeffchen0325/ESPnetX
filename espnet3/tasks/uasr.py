@@ -6,30 +6,30 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.fused import FusedFrontends
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.fused import FusedFrontends
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
 from espnet3.tasks.abs_task import AbsTask, optim_classes
 from espnet3.torch_utils.initialize import initialize
 from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn
 from espnet3.train.preprocessor import CommonPreprocessor
 from espnet3.train.uasr_trainer import UASRTrainer
-from espnet3.espnet_models.uasr.discriminator.abs_discriminator import AbsDiscriminator
-from espnet3.espnet_models.uasr.discriminator.conv_discriminator import ConvDiscriminator
-from espnet3.espnet_models.uasr.espnet_model import ESPnetUASRModel
-from espnet3.espnet_models.uasr.generator.abs_generator import AbsGenerator
-from espnet3.espnet_models.uasr.generator.conv_generator import ConvGenerator
-from espnet3.espnet_models.uasr.loss.abs_loss import AbsUASRLoss
-from espnet3.espnet_models.uasr.loss.discriminator_loss import UASRDiscriminatorLoss
-from espnet3.espnet_models.uasr.loss.gradient_penalty import UASRGradientPenalty
-from espnet3.espnet_models.uasr.loss.phoneme_diversity_loss import UASRPhonemeDiversityLoss
-from espnet3.espnet_models.uasr.loss.pseudo_label_loss import UASRPseudoLabelLoss
-from espnet3.espnet_models.uasr.loss.smoothness_penalty import UASRSmoothnessPenalty
-from espnet3.espnet_models.uasr.segmenter.abs_segmenter import AbsSegmenter
-from espnet3.espnet_models.uasr.segmenter.join_segmenter import JoinSegmenter
+from espnet3.models.uasr.discriminator.abs_discriminator import AbsDiscriminator
+from espnet3.models.uasr.discriminator.conv_discriminator import ConvDiscriminator
+from espnet3.models.uasr.espnet_model import ESPnetUASRModel
+from espnet3.models.uasr.generator.abs_generator import AbsGenerator
+from espnet3.models.uasr.generator.conv_generator import ConvGenerator
+from espnet3.models.uasr.loss.abs_loss import AbsUASRLoss
+from espnet3.models.uasr.loss.discriminator_loss import UASRDiscriminatorLoss
+from espnet3.models.uasr.loss.gradient_penalty import UASRGradientPenalty
+from espnet3.models.uasr.loss.phoneme_diversity_loss import UASRPhonemeDiversityLoss
+from espnet3.models.uasr.loss.pseudo_label_loss import UASRPseudoLabelLoss
+from espnet3.models.uasr.loss.smoothness_penalty import UASRSmoothnessPenalty
+from espnet3.models.uasr.segmenter.abs_segmenter import AbsSegmenter
+from espnet3.models.uasr.segmenter.join_segmenter import JoinSegmenter
 from espnet3.utils.nested_dict_action import NestedDictAction
 from espnet3.utils.types import int_or_none, str2bool, str_or_none
 

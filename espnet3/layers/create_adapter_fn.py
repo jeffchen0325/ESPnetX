@@ -3,7 +3,7 @@ from typing import List, Optional
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.frontend.s3prl import S3prlFrontend
+from espnet3.models.asr.frontend.s3prl import S3prlFrontend
 from espnet3.layers.create_adapter_utils import (
     check_target_module_exists,
     get_submodules,

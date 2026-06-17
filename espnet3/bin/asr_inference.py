@@ -12,19 +12,19 @@ import torch
 import torch.quantization
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.decoder.hugging_face_transformers_decoder import (
+from espnet3.models.asr.decoder.hugging_face_transformers_decoder import (
     get_hugging_face_model_lm_head,
     get_hugging_face_model_network,
 )
-from espnet3.espnet_models.asr.decoder.s4_decoder import S4Decoder
-from espnet3.espnet_models.asr.partially_AR_model import PartiallyARInference
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import (
+from espnet3.models.asr.decoder.s4_decoder import S4Decoder
+from espnet3.models.asr.partially_AR_model import PartiallyARInference
+from espnet3.models.asr.transducer.beam_search_transducer import (
     BeamSearchTransducer,
 )
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import (
+from espnet3.models.asr.transducer.beam_search_transducer import (
     ExtendedHypothesis as ExtTransHypothesis,
 )
-from espnet3.espnet_models.asr.transducer.beam_search_transducer import Hypothesis as TransHypothesis
+from espnet3.models.asr.transducer.beam_search_transducer import Hypothesis as TransHypothesis
 from espnet3.fileio.datadir_writer import DatadirWriter
 from espnet3.legacy.nets.batch_beam_search import BatchBeamSearch
 from espnet3.legacy.nets.batch_beam_search_online_sim import BatchBeamSearchOnlineSim

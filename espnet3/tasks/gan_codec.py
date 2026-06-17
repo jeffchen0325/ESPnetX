@@ -10,12 +10,12 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.gan_codec.abs_gan_codec import AbsGANCodec  # noqa
-from espnet3.espnet_models.gan_codec.dac.dac import DAC
-from espnet3.espnet_models.gan_codec.encodec.encodec import Encodec
-from espnet3.espnet_models.gan_codec.espnet_model import ESPnetGANCodecModel
-from espnet3.espnet_models.gan_codec.funcodec.funcodec import FunCodec
-from espnet3.espnet_models.gan_codec.soundstream.soundstream import SoundStream
+from espnet3.models.gan_codec.abs_gan_codec import AbsGANCodec  # noqa
+from espnet3.models.gan_codec.dac.dac import DAC
+from espnet3.models.gan_codec.encodec.encodec import Encodec
+from espnet3.models.gan_codec.espnet_model import ESPnetGANCodecModel
+from espnet3.models.gan_codec.funcodec.funcodec import FunCodec
+from espnet3.models.gan_codec.soundstream.soundstream import SoundStream
 from espnet3.tasks.abs_task import AbsTask, optim_classes
 from espnet3.train.class_choices import ClassChoices
 from espnet3.train.collate_fn import CommonCollateFn

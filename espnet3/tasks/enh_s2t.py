@@ -7,11 +7,11 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.ctc import CTC
-from espnet3.espnet_models.asr.espnet_model import ESPnetASRModel
-from espnet3.espnet_models.diar.espnet_model import ESPnetDiarizationModel
-from espnet3.espnet_models.enh.espnet_enh_s2t_model import ESPnetEnhS2TModel
-from espnet3.espnet_models.enh.espnet_model import ESPnetEnhancementModel
+from espnet3.models.asr.ctc import CTC
+from espnet3.models.asr.espnet_model import ESPnetASRModel
+from espnet3.models.diar.espnet_model import ESPnetDiarizationModel
+from espnet3.models.enh.espnet_enh_s2t_model import ESPnetEnhS2TModel
+from espnet3.models.enh.espnet_model import ESPnetEnhancementModel
 from espnet3.tasks.abs_task import AbsTask
 from espnet3.tasks.asr import ASRTask
 from espnet3.tasks.asr import decoder_choices as asr_decoder_choices_

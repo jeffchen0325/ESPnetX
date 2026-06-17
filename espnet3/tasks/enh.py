@@ -7,29 +7,29 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.diar.layers.abs_mask import AbsMask
-from espnet3.espnet_models.diar.layers.multi_mask import MultiMask
-from espnet3.espnet_models.diar.separator.tcn_separator_nomask import TCNSeparatorNomask
-from espnet3.espnet_models.enh.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.enh.decoder.conv_decoder import ConvDecoder
-from espnet3.espnet_models.enh.decoder.null_decoder import NullDecoder
-from espnet3.espnet_models.enh.decoder.stft_decoder import STFTDecoder
-from espnet3.espnet_models.enh.diffusion.abs_diffusion import AbsDiffusion
-from espnet3.espnet_models.enh.diffusion.score_based_diffusion import ScoreModel
-from espnet3.espnet_models.enh.diffusion_enh import ESPnetDiffusionModel
-from espnet3.espnet_models.enh.encoder.abs_encoder import AbsEncoder
-from espnet3.espnet_models.enh.encoder.conv_encoder import ConvEncoder
-from espnet3.espnet_models.enh.encoder.null_encoder import NullEncoder
-from espnet3.espnet_models.enh.encoder.stft_encoder import STFTEncoder
-from espnet3.espnet_models.enh.espnet_model import ESPnetEnhancementModel
-from espnet3.espnet_models.enh.loss.criterions.abs_loss import AbsEnhLoss
-from espnet3.espnet_models.enh.loss.criterions.tf_domain import (
+from espnet3.models.diar.layers.abs_mask import AbsMask
+from espnet3.models.diar.layers.multi_mask import MultiMask
+from espnet3.models.diar.separator.tcn_separator_nomask import TCNSeparatorNomask
+from espnet3.models.enh.decoder.abs_decoder import AbsDecoder
+from espnet3.models.enh.decoder.conv_decoder import ConvDecoder
+from espnet3.models.enh.decoder.null_decoder import NullDecoder
+from espnet3.models.enh.decoder.stft_decoder import STFTDecoder
+from espnet3.models.enh.diffusion.abs_diffusion import AbsDiffusion
+from espnet3.models.enh.diffusion.score_based_diffusion import ScoreModel
+from espnet3.models.enh.diffusion_enh import ESPnetDiffusionModel
+from espnet3.models.enh.encoder.abs_encoder import AbsEncoder
+from espnet3.models.enh.encoder.conv_encoder import ConvEncoder
+from espnet3.models.enh.encoder.null_encoder import NullEncoder
+from espnet3.models.enh.encoder.stft_encoder import STFTEncoder
+from espnet3.models.enh.espnet_model import ESPnetEnhancementModel
+from espnet3.models.enh.loss.criterions.abs_loss import AbsEnhLoss
+from espnet3.models.enh.loss.criterions.tf_domain import (
     FrequencyDomainAbsCoherence,
     FrequencyDomainDPCL,
     FrequencyDomainL1,
     FrequencyDomainMSE,
 )
-from espnet3.espnet_models.enh.loss.criterions.time_domain import (
+from espnet3.models.enh.loss.criterions.time_domain import (
     CISDRLoss,
     MultiResL1SpecLoss,
     SDRLoss,
@@ -38,36 +38,36 @@ from espnet3.espnet_models.enh.loss.criterions.time_domain import (
     TimeDomainL1,
     TimeDomainMSE,
 )
-from espnet3.espnet_models.enh.loss.wrappers.abs_wrapper import AbsLossWrapper
-from espnet3.espnet_models.enh.loss.wrappers.dpcl_solver import DPCLSolver
-from espnet3.espnet_models.enh.loss.wrappers.fixed_order import FixedOrderSolver
-from espnet3.espnet_models.enh.loss.wrappers.mixit_solver import MixITSolver
-from espnet3.espnet_models.enh.loss.wrappers.multilayer_pit_solver import MultiLayerPITSolver
-from espnet3.espnet_models.enh.loss.wrappers.pit_solver import PITSolver
-from espnet3.espnet_models.enh.separator.abs_separator import AbsSeparator
-from espnet3.espnet_models.enh.separator.asteroid_models import AsteroidModel_Converter
-from espnet3.espnet_models.enh.separator.bsrnn_separator import BSRNNSeparator
-from espnet3.espnet_models.enh.separator.conformer_separator import ConformerSeparator
-from espnet3.espnet_models.enh.separator.dan_separator import DANSeparator
-from espnet3.espnet_models.enh.separator.dc_crn_separator import DC_CRNSeparator
-from espnet3.espnet_models.enh.separator.dccrn_separator import DCCRNSeparator
-from espnet3.espnet_models.enh.separator.dpcl_e2e_separator import DPCLE2ESeparator
-from espnet3.espnet_models.enh.separator.dpcl_separator import DPCLSeparator
-from espnet3.espnet_models.enh.separator.dprnn_separator import DPRNNSeparator
-from espnet3.espnet_models.enh.separator.dptnet_separator import DPTNetSeparator
-from espnet3.espnet_models.enh.separator.fasnet_separator import FaSNetSeparator
-from espnet3.espnet_models.enh.separator.ineube_separator import iNeuBe
-from espnet3.espnet_models.enh.separator.neural_beamformer import NeuralBeamformer
-from espnet3.espnet_models.enh.separator.rnn_separator import RNNSeparator
-from espnet3.espnet_models.enh.separator.skim_separator import SkiMSeparator
-from espnet3.espnet_models.enh.separator.svoice_separator import SVoiceSeparator
-from espnet3.espnet_models.enh.separator.tcn_separator import TCNSeparator
-from espnet3.espnet_models.enh.separator.tfgridnet_separator import TFGridNet
-from espnet3.espnet_models.enh.separator.tfgridnetv2_separator import TFGridNetV2
-from espnet3.espnet_models.enh.separator.tfgridnetv3_separator import TFGridNetV3
-from espnet3.espnet_models.enh.separator.transformer_separator import TransformerSeparator
-from espnet3.espnet_models.enh.separator.uses2_separator import USES2Separator
-from espnet3.espnet_models.enh.separator.uses_separator import USESSeparator
+from espnet3.models.enh.loss.wrappers.abs_wrapper import AbsLossWrapper
+from espnet3.models.enh.loss.wrappers.dpcl_solver import DPCLSolver
+from espnet3.models.enh.loss.wrappers.fixed_order import FixedOrderSolver
+from espnet3.models.enh.loss.wrappers.mixit_solver import MixITSolver
+from espnet3.models.enh.loss.wrappers.multilayer_pit_solver import MultiLayerPITSolver
+from espnet3.models.enh.loss.wrappers.pit_solver import PITSolver
+from espnet3.models.enh.separator.abs_separator import AbsSeparator
+from espnet3.models.enh.separator.asteroid_models import AsteroidModel_Converter
+from espnet3.models.enh.separator.bsrnn_separator import BSRNNSeparator
+from espnet3.models.enh.separator.conformer_separator import ConformerSeparator
+from espnet3.models.enh.separator.dan_separator import DANSeparator
+from espnet3.models.enh.separator.dc_crn_separator import DC_CRNSeparator
+from espnet3.models.enh.separator.dccrn_separator import DCCRNSeparator
+from espnet3.models.enh.separator.dpcl_e2e_separator import DPCLE2ESeparator
+from espnet3.models.enh.separator.dpcl_separator import DPCLSeparator
+from espnet3.models.enh.separator.dprnn_separator import DPRNNSeparator
+from espnet3.models.enh.separator.dptnet_separator import DPTNetSeparator
+from espnet3.models.enh.separator.fasnet_separator import FaSNetSeparator
+from espnet3.models.enh.separator.ineube_separator import iNeuBe
+from espnet3.models.enh.separator.neural_beamformer import NeuralBeamformer
+from espnet3.models.enh.separator.rnn_separator import RNNSeparator
+from espnet3.models.enh.separator.skim_separator import SkiMSeparator
+from espnet3.models.enh.separator.svoice_separator import SVoiceSeparator
+from espnet3.models.enh.separator.tcn_separator import TCNSeparator
+from espnet3.models.enh.separator.tfgridnet_separator import TFGridNet
+from espnet3.models.enh.separator.tfgridnetv2_separator import TFGridNetV2
+from espnet3.models.enh.separator.tfgridnetv3_separator import TFGridNetV3
+from espnet3.models.enh.separator.transformer_separator import TransformerSeparator
+from espnet3.models.enh.separator.uses2_separator import USES2Separator
+from espnet3.models.enh.separator.uses_separator import USESSeparator
 from espnet3.iterators.abs_iter_factory import AbsIterFactory
 from espnet3.tasks.abs_task import AbsTask
 from espnet3.torch_utils.initialize import initialize

@@ -8,19 +8,19 @@ import numpy as np
 import torch
 from typeguard import typechecked
 
-from espnet3.espnet_models.asr.frontend.abs_frontend import AbsFrontend
-from espnet3.espnet_models.asr.frontend.default import DefaultFrontend
-from espnet3.espnet_models.asr.frontend.windowing import SlidingWindow
-from espnet3.espnet_models.asr.specaug.abs_specaug import AbsSpecAug
-from espnet3.espnet_models.asr.specaug.specaug import SpecAug
-from espnet3.espnet_models.asr_transducer.decoder.abs_decoder import AbsDecoder
-from espnet3.espnet_models.asr_transducer.decoder.mega_decoder import MEGADecoder
-from espnet3.espnet_models.asr_transducer.decoder.rnn_decoder import RNNDecoder
-from espnet3.espnet_models.asr_transducer.decoder.rwkv_decoder import RWKVDecoder
-from espnet3.espnet_models.asr_transducer.decoder.stateless_decoder import StatelessDecoder
-from espnet3.espnet_models.asr_transducer.encoder.encoder import Encoder
-from espnet3.espnet_models.asr_transducer.espnet_transducer_model import ESPnetASRTransducerModel
-from espnet3.espnet_models.asr_transducer.joint_network import JointNetwork
+from espnet3.models.asr.frontend.abs_frontend import AbsFrontend
+from espnet3.models.asr.frontend.default import DefaultFrontend
+from espnet3.models.asr.frontend.windowing import SlidingWindow
+from espnet3.models.asr.specaug.abs_specaug import AbsSpecAug
+from espnet3.models.asr.specaug.specaug import SpecAug
+from espnet3.models.asr_transducer.decoder.abs_decoder import AbsDecoder
+from espnet3.models.asr_transducer.decoder.mega_decoder import MEGADecoder
+from espnet3.models.asr_transducer.decoder.rnn_decoder import RNNDecoder
+from espnet3.models.asr_transducer.decoder.rwkv_decoder import RWKVDecoder
+from espnet3.models.asr_transducer.decoder.stateless_decoder import StatelessDecoder
+from espnet3.models.asr_transducer.encoder.encoder import Encoder
+from espnet3.models.asr_transducer.espnet_transducer_model import ESPnetASRTransducerModel
+from espnet3.models.asr_transducer.joint_network import JointNetwork
 from espnet3.layers.abs_normalize import AbsNormalize
 from espnet3.layers.global_mvn import GlobalMVN
 from espnet3.layers.utterance_mvn import UtteranceMVN
