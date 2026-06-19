@@ -1,0 +1,11 @@
+ESPnet3 Third-Party Notices
+=============================
+
+---
+This product is based on software developed at:
+- espnet (https://github.com/espnet/espnet)
+  Original License: See compliance/third-party-licenses/espnet-*/LICENSE
+
+---
+Mechanical Changes Notice:
+A significant number of source files have been renamed, relocated, or had their import paths updated as part of the ESPnet3 restructuring. Where such changes are purely mechanical and do not alter the functional logic or creative expression of the original code, the original copyright status is preserved unchanged. These files remain attributed to the original ESPnet authors via this NOTICE and the archived licenses in compliance/third-party-licenses/.
