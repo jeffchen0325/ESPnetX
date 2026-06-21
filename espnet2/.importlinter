@@ -9,6 +9,7 @@ source_modules =
     espnet2.schedulers
     espnet2.optimizers
     espnet2.fst
+    espnet2.legacy
 forbidden_modules =
     espnet2.fileio
     espnet2.utils
@@ -17,6 +18,7 @@ forbidden_modules =
     espnet2.schedulers
     espnet2.optimizers
     espnet2.fst
+    espnet2.legacy
 
 [importlinter:contract:macro-architecture]
 name = rule_1
